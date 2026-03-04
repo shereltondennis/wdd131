@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap");
+
+:root {
+    --page-bg: #edf1f4;
+    --panel-bg: #ffffff;
+    --ink: #0f172a;
+    --muted-ink: #344155;
+    --brand: #0f4c75;
+    --brand-dark: #11293b;
+    --border: #bcc8d4;
+    --link: #1f49a7;
+    --highlight: #f5dd72;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--page-bg);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background: var(--brand);
+    color: #ffffff;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1.35rem 1rem;
+    text-align: center;
+    font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+    font-size: clamp(1.2rem, 2.3vw, 2rem);
+    font-weight: 500;
+}
+
+#course-title {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--brand-dark);
+}
+
+.navigation a {
+    position: relative;
+    overflow: hidden;
+    color: #f8fafc;
+    text-decoration: none;
+    font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+    font-size: 1.1rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.35rem;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0.6rem;
+    right: 0.6rem;
+    bottom: 0.3rem;
+    height: 2px;
+    background: #f5dd72;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.navigation a:hover::after,
+.navigation a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.navigation a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+main {
+    width: min(1120px, 100% - 2.5rem);
+    margin: 1.6rem auto;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    grid-template-areas:
+        "title title"
+        "about resources";
+    gap: 1rem;
+    align-items: start;
+}
+
+.page-title {
+    grid-area: title;
+    margin: 0.4rem 0 0.2rem;
+    text-align: center;
+    font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 700;
+}
+
+.about-card {
+    grid-area: about;
+}
+
+.resources-card {
+    grid-area: resources;
+}
+
+.card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    background: var(--brand);
+    color: #ffffff;
+    text-align: center;
+    font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.about-card p {
+    margin: 0;
+    padding: 1.2rem 1.05rem;
+    font-size: 1.45rem;
+    line-height: 1.6;
+    color: var(--muted-ink);
+}
+
+.about-card p + p {
+    border-top: 1px solid var(--border);
+}
+
+.resources-card ul {
+    margin: 0;
+    padding: 1.2rem 2.2rem 1.5rem;
+}
+
+.resources-card li {
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    line-height: 1.45;
+}
+
+.resources-card a {
+    color: var(--link);
+}
+
+.resources-card a:hover,
+.resources-card a:focus-visible {
+    color: #142f70;
+}
+
+footer {
+    background: var(--brand);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0.75rem 1.2rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 1.15rem;
+}
+
+#lastModified {
+    color: var(--highlight);
+    font-weight: 600;
+}
+
+@media (max-width: 920px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "about"
+            "resources";
+        width: min(1120px, 100% - 1.4rem);
+    }
+
+    .page-title {
+        margin-bottom: 0.35rem;
+    }
+}

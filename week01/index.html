@@ -7,44 +7,44 @@
     <meta name="author" content="Sherelton Blessing Dennis">
     <title>WDD 131 - Dynamic Web Fundamentals - Sherelton Blessing Dennis</title>
     <link rel="stylesheet" href="stylesheet/base.css">
-    <link rel="stylesheet" href="stylesheet/layout.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <h1><span id="course-title">WDD 131 &ndash; Dynamic Web Fundamentals</span></h1>
         <nav class="navigation">
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a>
             <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener noreferrer">Scripture</a>
             <a href="#" title="Final project link coming soon">Final Project</a>
         </nav>
     </header>
+
     <main>
-        <h1>Sherelton Blessing Dennis</h1>
+        <h1 class="page-title">Sherelton Blessing Dennis</h1>
 
-        <section class="card">
+        <section class="card about-card">
             <h2>About Me</h2>
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=80" alt="Portrait representing Sherelton Blessing Dennis">
-            <p>
-                I am a web development student focused on building clean, accessible, and responsive websites.
-                I enjoy learning how HTML, CSS, and JavaScript work together to create engaging user experiences.
-            </p>
+            <p>Hello! My name is Sherelton Blessing Dennis, and I am a student at Brigham Young University-Idaho. I am currently pursuing a degree in Computer Information Technology with an emphasis in Software Development. I have a passion for technology and programming, and I am excited to learn more about web development in this course.</p>
+            <p>In my free time, I enjoy playing video games, hiking, and spending time with my family. I also have a strong interest in learning new programming languages and exploring different areas of software development.</p>
         </section>
 
-        <section class="card">
-            <h2>My Learning Journey</h2>
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=640&q=80" alt="Laptop and coding workspace">
-            <p>
-                In WDD 131, I am practicing page structure, layout techniques, and dynamic page behaviors.
-                My goal is to apply these skills in future projects and my final course portfolio.
-            </p>
-        </section>
+        <aside class="card resources-card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+                <li><a href="https://picsum.photos/" target="_blank" rel="noopener noreferrer">Lorem Picsum Image Placeholder</a></li>
+            </ul>
+        </aside>
     </main>
-    <aside>
-        <p>Aside content</p>
-    </aside>
+
     <footer>
-        <p>&copy; 2024 Sherelton Blessing Dennis. All rights reserved.</p>
+        <p>&copy; <span id="currentyear"></span> Sherelton Blessing Dennis, United States</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
