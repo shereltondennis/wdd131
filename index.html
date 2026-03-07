@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dynamic Web Fundamentals - Sherelton Blessing Dennis">
-    <meta name="author" content="Sherelton Blessing Dennis">
-    <title>WDD 131 - Dynamic Web Fundamentals - Sherelton Blessing Dennis</title>
-    <link rel="stylesheet" href="stylesheet/base.css">
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals assignment page">
+    <meta name="author" content="Rubia Magdalena Francesco">
+    <title>WDD 131 - Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1><span id="course-title">WDD 131 &ndash; Dynamic Web Fundamentals</span></h1>
-        <nav class="navigation">
+    <header class="site-header">
+        <p class="course-title">WDD 131: Dynamic Web Fundamentals</p>
+        <nav class="navigation" aria-label="Primary navigation">
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a>
             <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener noreferrer">Scripture</a>
-            <a href="#" title="Final project link coming soon">Final Project</a>
+            <a href="#" aria-label="Final project coming soon">Final Project</a>
         </nav>
     </header>
 
     <main>
-        <h1 class="page-title">Sherelton Blessing Dennis</h1>
+        <h1 class="page-title">Rubia m. Francesco</h1>
 
         <section class="card about-card">
             <h2>About Me</h2>
-            <p>Hello! My name is Sherelton Blessing Dennis, and I am a student at Brigham Young University-Idaho. I am currently pursuing a degree in Computer Information Technology with an emphasis in Software Development. I have a passion for technology and programming, and I am excited to learn more about web development in this course.</p>
-            <p>In my free time, I enjoy playing video games, hiking, and spending time with my family. I also have a strong interest in learning new programming languages and exploring different areas of software development.</p>
+
+            <div class="about-top">
+                <p>My name is Rubia and I go by Ruby. I was born in South Africa and live with my family in Liberia. I am currently working as administrative legal assistant at a law firm. My children are my world and I love spending time with them. I love to travel and I love to learn new things.</p>
+                <img src="images/profile.jpg" alt="Portrait of Rubia M. Francesco">
+            </div>
+
+            <h3>Monrovia, Liberia</h3>
+            <hr class="about-divider">
+
+            <div class="country-info">
+                <figure class="flag-panel">
+                    <div class="liberia-flag" role="img" aria-label="Flag of Liberia"></div>
+                    <figcaption>Official Flag of Liberia</figcaption>
+                </figure>
+                <p>Liberia is Africa's oldest republic and is located on the west coast of Africa. It was founded in 1822 and declared independence in 1847. Monrovia is the capital city, and English is the official language. Liberia is known for its tropical forests, Atlantic coastline, and resilient culture.</p>
+            </div>
         </section>
 
         <aside class="card resources-card">
@@ -43,7 +57,7 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Sherelton Blessing Dennis, United States</p>
+        <p>&copy; <span id="currentyear"></span> &#x1F338; Rubia Magdalena Francesco &#x1F338; Liberia</p>
         <p id="lastModified"></p>
     </footer>
 </body>

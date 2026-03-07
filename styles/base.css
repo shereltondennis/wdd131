@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --brand-blue: #0f4f7f;
+    --nav-dark: #2f2f31;
+    --page-bg: #e8e8e8;
+    --card-bg: #eeeeee;
+    --card-border: #b7b7b7;
+    --link-blue: #063fc4;
+    --highlight: #f7ea59;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background: var(--page-bg);
+    color: #121212;
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-header {
+    color: #ffffff;
+    background: var(--brand-blue);
+}
+
+.course-title {
+    margin: 0;
+    padding: 14px 12px;
+    text-align: center;
+    font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+    font-weight: 500;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    background: var(--nav-dark);
+}
+
+.navigation a {
+    display: block;
+    padding: 11px 8px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+    text-decoration: underline;
+}
+
+main {
+    width: min(1200px, calc(100% - 64px));
+    margin: 24px auto 14px;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(270px, 1fr);
+    grid-template-areas:
+        "title title"
+        "about resources";
+    align-items: start;
+    gap: 10px;
+}
+
+.page-title {
+    grid-area: title;
+    margin: 0 0 12px;
+    text-align: center;
+    font-size: clamp(2rem, 3.3vw, 2.9rem);
+    font-weight: 500;
+}
+
+.about-card {
+    grid-area: about;
+}
+
+.resources-card {
+    grid-area: resources;
+}
+
+.card {
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+}
+
+.card h2 {
+    margin: 0;
+    padding: 10px 14px;
+    text-align: center;
+    color: #ffffff;
+    background: var(--brand-blue);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.about-top {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 18px;
+    padding: 20px 18px 8px;
+}
+
+.about-top p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.about-top img {
+    width: 170px;
+    height: 195px;
+    object-fit: cover;
+    border: 1px solid #9a9a9a;
+    justify-self: center;
+    align-self: start;
+    margin-top: 10px;
+}
+
+.about-card h3 {
+    margin: 6px 18px 8px;
+    text-align: center;
+    font-size: 2.05rem;
+    font-weight: 600;
+}
+
+.about-divider {
+    border: 0;
+    border-top: 1px solid #c1c1c1;
+    margin: 0 56px;
+}
+
+.country-info {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    gap: 18px;
+    padding: 16px 18px 18px;
+}
+
+.flag-panel {
+    margin: 0;
+    text-align: center;
+}
+
+.liberia-flag {
+    position: relative;
+    width: 175px;
+    height: 112px;
+    border: 1px solid #a9a9a9;
+    background: repeating-linear-gradient(
+        to bottom,
+        #bf1e2e 0 10.2px,
+        #ffffff 10.2px 20.4px
+    );
+}
+
+.liberia-flag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 61px;
+    background: #1f4aa5;
+}
+
+.liberia-flag::after {
+    content: "*";
+    position: absolute;
+    top: 12px;
+    left: 26px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.flag-panel figcaption {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.country-info p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.resources-card ul {
+    margin: 0;
+    padding: 118px 36px 28px 56px;
+}
+
+.resources-card li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.resources-card a {
+    color: var(--link-blue);
+}
+
+footer {
+    margin-top: 10px;
+    background: var(--brand-blue);
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 10px 12px;
+}
+
+footer p {
+    margin: 3px 0;
+    font-size: 1.15rem;
+}
+
+#lastModified {
+    color: var(--highlight);
+    font-size: 1rem;
+}
+
+@media (max-width: 980px) {
+    .navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main {
+        width: min(1200px, calc(100% - 24px));
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "about"
+            "resources";
+        gap: 14px;
+    }
+
+    .about-top {
+        grid-template-columns: 1fr;
+    }
+
+    .country-info {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-card ul {
+        padding-top: 22px;
+    }
+}
