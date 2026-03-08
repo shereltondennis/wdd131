@@ -94,7 +94,7 @@ main {
     grid-template-areas:
         "title title"
         "about resources";
-    align-items: start;
+    align-items: stretch;
     gap: 10px;
 }
 
@@ -112,6 +112,8 @@ main {
 
 .resources-card {
     grid-area: resources;
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
@@ -225,6 +227,7 @@ main {
 }
 
 .resources-card ul {
+    flex: 1;
     margin: 0;
     padding: 30px 36px 28px 56px;
 }
