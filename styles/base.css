@@ -4,10 +4,11 @@
     --brand-blue: #0f4f7f;
     --nav-dark: #2f2f31;
     --page-bg: #e8e8e8;
-    --card-bg: #eeeeee;
+    --card-bg: #f7f7f7;
     --card-border: #b7b7b7;
     --link-blue: #063fc4;
-    --highlight: #f7ea59;
+    --highlight: #ffe28a;
+    --focus-ring: #ffffff;
 }
 
 * {
@@ -22,6 +23,23 @@ body {
     background: var(--page-bg);
     color: #121212;
     font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.skip-link {
+    position: absolute;
+    top: -48px;
+    left: 12px;
+    z-index: 10;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #111111;
+    background: #ffffff;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 12px;
 }
 
 .site-header {
@@ -50,13 +68,22 @@ body {
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.navigation a:hover,
+.navigation a:hover {
+    color: #ffffff;
+    background: #404044;
+    box-shadow: inset 0 -3px 0 #ffffff;
+}
+
 .navigation a:focus-visible {
-    text-decoration: underline;
+    outline: 2px solid var(--focus-ring);
+    outline-offset: -2px;
+    background: #404044;
+    box-shadow: inset 0 -3px 0 #ffffff;
 }
 
 main {
@@ -199,7 +226,7 @@ main {
 
 .resources-card ul {
     margin: 0;
-    padding: 118px 36px 28px 56px;
+    padding: 30px 36px 28px 56px;
 }
 
 .resources-card li {

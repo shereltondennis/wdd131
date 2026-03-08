@@ -5,5 +5,5 @@ if (yearSpan) {
 
 const lastModifiedParagraph = document.querySelector("#lastModified");
 if (lastModifiedParagraph) {
-    lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
+    lastModifiedParagraph.textContent = `Last Modified: ${document.lastModified}`;
 }
