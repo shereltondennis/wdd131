@@ -181,37 +181,12 @@ main {
     text-align: center;
 }
 
-.liberia-flag {
-    position: relative;
+.flag-image {
+    display: block;
     width: 175px;
     height: 112px;
+    object-fit: cover;
     border: 1px solid #a9a9a9;
-    background: repeating-linear-gradient(
-        to bottom,
-        #bf1e2e 0 10.2px,
-        #ffffff 10.2px 20.4px
-    );
-}
-
-.liberia-flag::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70px;
-    height: 61px;
-    background: #1f4aa5;
-}
-
-.liberia-flag::after {
-    content: "*";
-    position: absolute;
-    top: 12px;
-    left: 26px;
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1;
 }
 
 .flag-panel figcaption {
