@@ -1,14 +1,3 @@
-:root {
-    --brand-blue: #0f4f7f;
-    --nav-dark: #2f2f31;
-    --page-bg: #e8e8e8;
-    --card-bg: #f7f7f7;
-    --card-border: #b7b7b7;
-    --link-blue: #063fc4;
-    --highlight: #ffe28a;
-    --focus-ring: #ffffff;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -18,7 +7,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background: var(--page-bg);
+    background: #e8e8e8;
     color: #121212;
     font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
@@ -44,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #ffffff;
-    background: var(--brand-blue);
+    background: #0f4f7f;
 }
 
 .course-title {
@@ -59,7 +48,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: center;
-    background: var(--nav-dark);
+    background: #2f2f31;
 }
 
 .navigation a {
@@ -80,7 +69,7 @@ body {
 }
 
 .navigation a:focus-visible {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid #ffffff;
     outline-offset: -2px;
     background: #404044;
     box-shadow: inset 0 -3px 0 #ffffff;
@@ -117,10 +106,10 @@ main {
 }
 
 .card {
-    border: 1px solid var(--card-border);
+    border: 1px solid #b7b7b7;
     border-radius: 12px;
     overflow: hidden;
-    background: var(--card-bg);
+    background: #f7f7f7;
 }
 
 .card h2 {
@@ -128,7 +117,7 @@ main {
     padding: 10px 14px;
     text-align: center;
     color: #ffffff;
-    background: var(--brand-blue);
+    background: #0f4f7f;
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -214,12 +203,12 @@ main {
 }
 
 .resources-card a {
-    color: var(--link-blue);
+    color: #063fc4;
 }
 
 footer {
     margin-top: 10px;
-    background: var(--brand-blue);
+    background: #0f4f7f;
     color: #ffffff;
     text-align: center;
     padding: 14px 10px 12px;
@@ -231,7 +220,7 @@ footer p {
 }
 
 #lastModified {
-    color: var(--highlight);
+    color: #ffe28a;
     font-size: 1rem;
 }
 
