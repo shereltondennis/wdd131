@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 :root {
     --brand-blue: #0f4f7f;
     --nav-dark: #2f2f31;
@@ -43,6 +41,8 @@ body {
 }
 
 .site-header {
+    display: flex;
+    flex-direction: column;
     color: #ffffff;
     background: var(--brand-blue);
 }
