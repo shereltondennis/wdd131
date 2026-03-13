@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-bar {
+    flex: 0 0 auto;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
