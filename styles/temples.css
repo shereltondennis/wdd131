@@ -1,5 +1,5 @@
 :root {
-  --bg: #f6f1e8;
+  --bg: #0077b6;
   --surface: #ffffff;
   --text: #1f2933;
   --muted: #5f6b75;
@@ -29,7 +29,7 @@ img {
 }
 
 .site-header {
-  background: var(--surface);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   padding: 1rem 1.25rem;
   display: flex;
@@ -49,17 +49,15 @@ img {
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: var(--accent-strong);
+  color: #ffffff;
 }
 
 .nav-toggle {
-  border: 2px solid var(--accent-strong);
+  border: none;
   background: transparent;
-  color: var(--accent-strong);
+  color: #ffffff;
   font-size: 1.35rem;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
+  padding: 0.35rem 0.5rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -69,8 +67,8 @@ img {
 
 .nav-toggle:hover,
 .nav-toggle:focus-visible {
-  background: var(--accent-strong);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--bg);
   transform: scale(1.05);
   outline: none;
 }
@@ -86,9 +84,9 @@ img {
 }
 
 .nav-menu a {
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
-  color: var(--text);
+  color: #ffffff;
   padding: 0.65rem 0.9rem;
   border-radius: 999px;
   border: 1px solid transparent;
