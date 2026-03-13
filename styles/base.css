@@ -13,6 +13,10 @@ body {
     line-height: 1.5;
 }
 
+p {
+    padding: 0;
+}
+
 .skip-link {
     position: absolute;
     top: -48px;
@@ -88,6 +92,11 @@ main {
     gap: 10px;
 }
 
+main img {
+    width: 150px;
+    height: auto;
+}
+
 .page-title {
     grid-area: title;
     margin: 0 0 12px;
@@ -151,8 +160,6 @@ aside img {
 }
 
 .about-top img {
-    width: 170px;
-    height: 195px;
     object-fit: cover;
     border: 1px solid #9a9a9a;
     justify-self: center;
@@ -222,7 +229,8 @@ aside img {
 }
 
 footer {
-    margin-top: 10px;
+    margin-top: 16px;
+    border-top: 2px solid #c1c1c1;
     background: #0f4f7f;
     color: #ffffff;
     text-align: center;
