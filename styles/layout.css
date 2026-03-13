@@ -20,12 +20,24 @@ header {
 main {
     grid-area: main;
     padding: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 aside {
     grid-area: aside;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #c5c5c5;
     padding: 1rem;
     background-color: #e5e7eb;
+    color: #111827;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
 }
 
 footer {
