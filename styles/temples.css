@@ -1,12 +1,19 @@
 :root {
   --bg: #0077b6;
+  --bg-top: #faf7f2;
+  --bg-bottom: #efe5d6;
   --surface: #ffffff;
   --text: #1f2933;
   --muted: #5f6b75;
   --accent: #b45309;
   --accent-strong: #7c2d12;
   --border: #e4d9c7;
-  --shadow: 0 12px 30px rgba(20, 25, 30, 0.12);
+  --on-primary: #ffffff;
+  --overlay-accent: #b4530914;
+  --shadow-color: #14191e1f;
+  --footer-bg: #1f2933;
+  --footer-text: #f8f3eb;
+  --shadow: 0 12px 30px var(--shadow-color);
   --radius: 16px;
 }
 
@@ -19,7 +26,7 @@
 body {
   font-family: "Karla", sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #faf7f2 0%, #efe5d6 100%);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
   min-height: 100vh;
 }
 
@@ -31,6 +38,7 @@ img {
 .site-header {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
+  color: var(--on-primary);
   padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
@@ -49,13 +57,13 @@ img {
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: #ffffff;
+  color: var(--on-primary);
 }
 
 .nav-toggle {
   border: none;
   background: transparent;
-  color: #ffffff;
+  color: var(--on-primary);
   font-size: 1.35rem;
   padding: 0.35rem 0.5rem;
   cursor: pointer;
@@ -67,7 +75,7 @@ img {
 
 .nav-toggle:hover,
 .nav-toggle:focus-visible {
-  background: #ffffff;
+  background: var(--on-primary);
   color: var(--bg);
   transform: scale(1.05);
   outline: none;
@@ -86,18 +94,18 @@ img {
 .nav-menu a {
   font-weight: 700;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--on-primary);
   padding: 0.65rem 0.9rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: rgba(180, 83, 9, 0.08);
+  background: var(--overlay-accent);
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--on-primary);
   border-color: var(--accent);
   transform: translateX(4px);
   outline: none;
@@ -140,8 +148,8 @@ figcaption {
 }
 
 footer {
-  background: #1f2933;
-  color: #f8f3eb;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.95rem;
