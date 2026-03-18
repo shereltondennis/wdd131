@@ -127,8 +127,9 @@ main {
 .site-footer {
   text-align: center;
   padding: 1.5rem 1rem 2rem;
-  color: var(--muted);
+  color: #fff;
   font-size: 0.95rem;
+  background: var(--accent);
 }
 
 @media (min-width: 700px) {
