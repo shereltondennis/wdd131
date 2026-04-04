@@ -125,11 +125,22 @@ main {
 }
 
 .site-footer {
-  text-align: center;
-  padding: 1.5rem 1rem 2rem;
+  margin-top: 16px;
+  border-top: 2px solid #c1c1c1;
+  background: #0f4f7f;
   color: #fff;
-  font-size: 0.95rem;
-  background: var(--accent);
+  text-align: center;
+  padding: 14px 10px 12px;
+}
+
+.site-footer p {
+  margin: 3px 0;
+  font-size: 1.15rem;
+}
+
+#lastModified {
+  color: #ffe28a;
+  font-size: 1rem;
 }
 
 @media (min-width: 700px) {
