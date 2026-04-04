@@ -120,6 +120,19 @@ header p {
   height: 80px;
 }
 
+.color-swatch.swatch-red {
+  background: var(--color-primary);
+}
+
+.color-swatch.swatch-blue {
+  background: var(--color-secondary);
+}
+
+.color-swatch.swatch-white {
+  background: var(--color-background);
+  border-top: 1px solid var(--color-border);
+}
+
 .color-body {
   padding: 12px 14px 16px;
 }
