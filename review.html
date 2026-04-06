@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmation page for product review submissions.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <title>Review Submitted</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="page-header">
+    <div class="header-inner">
+      <p class="eyebrow">WDD 131 · Product Review</p>
+      <h1>Review Received</h1>
+      <p class="lead">Thanks for taking a moment to share your feedback.</p>
+    </div>
+  </header>
+
+  <main id="main-content" class="form-shell">
+    <section class="confirmation-card">
+      <h2>Your submission is complete.</h2>
+      <p>We appreciate your insight and will use it to improve the product experience.</p>
+      <p class="review-count">Total reviews submitted: <span id="review-count">0</span></p>
+      <a class="back-link" href="form.html">Submit another review</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> &#x1F338; Sherelton Blessing Dennis &#x1F338; Liberia</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
