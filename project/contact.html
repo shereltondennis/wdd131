@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Liberian Dishes team for vendor tips and itinerary help.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <title>Liberian Dishes | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" focusable="false">
+            <path d="M18 6c2.2 0 4 1.8 4 4v18a4 4 0 0 1-8 0V10c0-2.2 1.8-4 4-4zm0 26a6 6 0 0 0 6-6V10a6 6 0 0 0-12 0v16a6 6 0 0 0 6 6zm22-2h6v-6c0-4.4-3.6-8-8-8h-4v6h4c1.1 0 2 .9 2 2v6zM10 46c0-7.7 6.3-14 14-14h16c7.7 0 14 6.3 14 14v6H10v-6zm2 0v4h40v-4c0-6.6-5.4-12-12-12H24c-6.6 0-12 5.4-12 12z"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Liberian Dishes</h1>
+          <p class="small">Everyday meals, bold flavors</p>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dishes.html">Dishes</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Plan a food crawl</h2>
+      <p>Tell us what you like and we will suggest a path through the city. Your info stays in your browser.</p>
+
+      <form id="contactForm" class="form-grid" method="post" action="#">
+        <div class="form-row">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="location">Where are you staying?</label>
+          <input type="text" id="location" name="location" required placeholder="Sinkor, Paynesville, Downtown">
+        </div>
+        <div class="form-row">
+          <label for="spice">Spice comfort</label>
+          <select id="spice" name="spice" required>
+            <option value="mild">Mild</option>
+            <option value="medium">Medium</option>
+            <option value="hot">Hot</option>
+          </select>
+        </div>
+        <div class="form-row full">
+          <label for="request">What do you want to eat?</label>
+          <textarea id="request" name="request" required></textarea>
+        </div>
+        <div class="form-row full">
+          <label>
+            <input type="checkbox" name="updates">
+            Send me updates about new vendors
+          </label>
+        </div>
+        <div class="form-row full">
+          <button class="button primary" type="submit">Send my request</button>
+        </div>
+      </form>
+
+      <p id="formStatus" class="small"></p>
+    </section>
+
+    <section class="section">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Quick response</h3>
+          <p>We reply within one business day with a personalized dish list.</p>
+        </article>
+        <article class="card">
+          <h3>Local safety tips</h3>
+          <p>We share food safety and pricing tips for first-time visitors.</p>
+        </article>
+        <article class="card">
+          <h3>Weekend markets</h3>
+          <p>We can help you time your visit with live music and night markets.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <img src="images/hero-market.svg" alt="Evening market lights" width="1200" height="700" loading="lazy">
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <p>&copy; <span id="currentyear"></span> Sherelton Blessing Dennis | Liberia</p>
+        <p id="lastModified" class="small"></p>
+      </div>
+      <div class="footer-links">
+        <a href="references.html">References</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/site.js" defer></script>
+</body>
+</html>

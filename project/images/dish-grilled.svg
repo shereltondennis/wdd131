@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Grilled fish with lime">
+  <rect width="800" height="500" fill="#fff7ed"/>
+  <ellipse cx="400" cy="340" rx="220" ry="110" fill="#ffffff" stroke="#e5e7eb" stroke-width="6"/>
+  <ellipse cx="400" cy="320" rx="190" ry="80" fill="#0f172a"/>
+  <path d="M280 320c80-40 160-40 240 0-80 40-160 40-240 0z" fill="#94a3b8"/>
+  <circle cx="500" cy="300" r="22" fill="#84cc16"/>
+  <circle cx="540" cy="330" r="10" fill="#65a30d"/>
+</svg>

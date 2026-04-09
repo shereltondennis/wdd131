@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Palava sauce with rice">
+  <rect width="800" height="500" fill="#f0fdf4"/>
+  <ellipse cx="400" cy="340" rx="220" ry="110" fill="#ffffff" stroke="#e5e7eb" stroke-width="6"/>
+  <ellipse cx="400" cy="320" rx="190" ry="80" fill="#15803d"/>
+  <circle cx="300" cy="320" r="22" fill="#fbbf24"/>
+  <circle cx="360" cy="300" r="18" fill="#fde68a"/>
+  <rect x="440" y="290" width="90" height="60" rx="14" fill="#f97316"/>
+</svg>
