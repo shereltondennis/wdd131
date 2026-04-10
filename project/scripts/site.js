@@ -5,7 +5,7 @@ const dishes = [
     description: `Smoky rice cooked with tomato, peppers, and a touch of dried fish for depth.`,
     spice: `medium`,
     price: 4,
-    image: `images/dish-jollof.svg`,
+    image: `images/liberian-ollof-rice2.png`,
     alt: `Bowl of jollof rice with peppers`,
   },
   {
@@ -14,7 +14,7 @@ const dishes = [
     description: `Leafy greens simmered with palm oil and protein, served over rice.`,
     spice: `mild`,
     price: 5,
-    image: `images/dish-palava.svg`,
+    image: `images/palava-souce1.png`,
     alt: `Serving of palava sauce with rice`,
   },
   {
@@ -23,7 +23,7 @@ const dishes = [
     description: `Soft fufu paired with a bright, gingery broth and tender fish.`,
     spice: `hot`,
     price: 6,
-    image: `images/dish-fufu.svg`,
+    image: `images/liberia--cassava-ufu-pepper-soup%20(3).jpg`,
     alt: `Fufu with pepper soup in a bowl`,
   },
   {
@@ -32,7 +32,7 @@ const dishes = [
     description: `Char-grilled whole fish with lime and a side of crisp salad.`,
     spice: `mild`,
     price: 7,
-    image: `images/dish-grilled.svg`,
+    image: `images/liberian-fish.jpg`,
     alt: `Grilled fish on a platter`,
   },
 ];

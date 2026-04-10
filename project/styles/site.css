@@ -45,7 +45,7 @@ textarea:focus-visible {
 }
 
 header {
-  background: linear-gradient(120deg, var(--blue), #001a44 60%, var(--red));
+  background: linear-gradient(120deg, #0b0b0b, #0b0b0b 60%, var(--red));
   color: #ffffff;
 }
 
@@ -68,19 +68,28 @@ header {
 }
 
 .brand-mark {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: #ffffff;
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  background: #0b0b0b;
   display: grid;
   place-items: center;
-  box-shadow: var(--shadow);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.brand-mark svg,
+.brand-mark img {
+  width: 96px;
+  height: 96px;
 }
 
 .brand-mark svg {
-  width: 30px;
-  height: 30px;
   fill: var(--red);
+}
+
+.brand-mark img {
+  object-fit: contain;
 }
 
 .brand h1 {
