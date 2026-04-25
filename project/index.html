@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Liberian Dishes celebrates everyday Liberian meals with dish highlights, vendor tips, and traveler-friendly guidance.">
+  <meta name="description" content="Liberian Dishes celebrates everyday Liberian meals and now supports quick meal ordering for clients.">
   <meta name="author" content="Sherelton Blessing Dennis">
   <title>Liberian Dishes | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,8 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="dishes.html">Dishes</a></li>
+          <li><a href="dishes.html#orderPanel">Order</a></li>
+          <li><a href="#bookingPanel">Booking</a></li>
           <li><a href="vendors.html">Vendors</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -40,7 +42,8 @@
         <h2>Find the heart of Liberia through its most loved dishes.</h2>
         <p>Discover iconic street meals, learn what to order first, and meet the vendors who keep Monrovia fed from sunrise to late-night.</p>
         <div class="hero-actions">
-          <a class="button primary" href="dishes.html">Explore dishes</a>
+          <a class="button primary" href="#orderPanel">Order meals now</a>
+          <a class="button secondary" href="dishes.html">Explore dishes</a>
           <a class="button secondary" href="vendors.html">Find vendors</a>
         </div>
       </div>
@@ -51,13 +54,83 @@
       <div class="panel">
         <h3>Visitor tracker</h3>
         <p id="visitCount">Loading your visit history...</p>
-        <p class="small">We store a simple visit count in your browser only.</p>
+        <p class="muted-text">We store a simple visit count in your browser only.</p>
       </div>
     </section>
 
     <section class="section">
       <h3>Featured dishes</h3>
-      <div class="card-grid" id="dishGrid">
+      <p class="section-intro">Add meals to your cart, choose pickup details, and confirm your order in seconds.</p>
+      <div class="order-layout">
+        <div class="card-grid" id="dishGrid">
+        </div>
+        <aside class="panel cart-panel" id="orderPanel" aria-labelledby="orderTitle">
+          <h3 id="orderTitle">Your cart <span class="badge badge-neutral" id="cartCount">0 items</span></h3>
+          <ul class="cart-list" id="cartItems" aria-live="polite"></ul>
+          <div class="cart-totals" id="cartSummary"></div>
+          <form id="checkoutForm" class="form-grid" method="post" action="#">
+            <div class="form-row full">
+              <label for="orderName">Client name</label>
+              <input type="text" id="orderName" name="orderName" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <label for="orderPhone">Phone number</label>
+              <input type="tel" id="orderPhone" name="orderPhone" required autocomplete="tel">
+            </div>
+            <div class="form-row">
+              <label for="pickupTime">Pickup time</label>
+              <input type="time" id="pickupTime" name="pickupTime" required>
+            </div>
+            <div class="form-row full">
+              <label for="pickupSpot">Pickup location</label>
+              <input type="text" id="pickupSpot" name="pickupSpot" placeholder="Sinkor Beach, Broad Street, Paynesville">
+            </div>
+            <div class="form-row full">
+              <button class="button primary" id="checkoutButton" type="submit">Place order</button>
+            </div>
+          </form>
+          <p id="checkoutStatus" class="status-text" aria-live="polite"></p>
+          <p id="lastOrder" class="muted-text"></p>
+          <section class="booking-panel" id="bookingPanel" aria-labelledby="bookingTitle">
+            <h4 id="bookingTitle">Book dishes for later</h4>
+            <p class="muted-text">Reserve meals for a future date and pickup time.</p>
+            <form id="bookingForm" class="form-grid" method="post" action="#">
+              <div class="form-row full">
+                <label for="bookingName">Client name</label>
+                <input type="text" id="bookingName" name="bookingName" required autocomplete="name">
+              </div>
+              <div class="form-row">
+                <label for="bookingPhone">Phone number</label>
+                <input type="tel" id="bookingPhone" name="bookingPhone" required autocomplete="tel">
+              </div>
+              <div class="form-row">
+                <label for="bookingGuests">Number of plates</label>
+                <input type="number" id="bookingGuests" name="bookingGuests" min="1" value="1" required>
+              </div>
+              <div class="form-row">
+                <label for="bookingDate">Booking date</label>
+                <input type="date" id="bookingDate" name="bookingDate" required>
+              </div>
+              <div class="form-row">
+                <label for="bookingTime">Pickup time</label>
+                <input type="time" id="bookingTime" name="bookingTime" required>
+              </div>
+              <fieldset class="form-row full booking-dishes">
+                <legend>Select dishes</legend>
+                <div class="dish-options" id="bookingDishOptions"></div>
+              </fieldset>
+              <div class="form-row full">
+                <label for="bookingNotes">Special note</label>
+                <textarea id="bookingNotes" name="bookingNotes" placeholder="No fish, less pepper, extra rice..."></textarea>
+              </div>
+              <div class="form-row full">
+                <button class="button secondary" type="submit">Book dishes</button>
+              </div>
+            </form>
+            <p id="bookingStatus" class="status-text" aria-live="polite"></p>
+            <p id="lastBooking" class="muted-text"></p>
+          </section>
+        </aside>
       </div>
     </section>
 
@@ -65,7 +138,7 @@
       <div class="panel">
         <h3>Plan your first meal</h3>
         <p>Start with mild dishes like palava sauce if you are spice-sensitive, then build up to pepper soup when you are ready.</p>
-        <p class="notice">Tip: Ask for �small pepper� to keep heat levels friendly.</p>
+        <p class="notice">Tip: Ask for "small pepper" to keep heat levels friendly.</p>
       </div>
     </section>
   </main>

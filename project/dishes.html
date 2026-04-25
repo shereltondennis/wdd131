@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse classic Liberian dishes with spice guidance and price expectations.">
+  <meta name="description" content="Browse and purchase classic Liberian dishes with spice guidance and transparent pricing.">
   <meta name="author" content="Sherelton Blessing Dennis">
   <title>Liberian Dishes | Dishes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="dishes.html" aria-current="page">Dishes</a></li>
+          <li><a href="#orderPanel">Order</a></li>
+          <li><a href="#bookingPanel">Booking</a></li>
           <li><a href="vendors.html">Vendors</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -47,12 +49,82 @@
           <option value="hot">Hot</option>
         </select>
       </div>
-      <p id="spiceNote" class="small"></p>
+      <p id="spiceNote" class="muted-text"></p>
     </section>
 
     <section class="section">
       <h3>Signature dishes</h3>
-      <div class="card-grid" id="dishGrid">
+      <p class="section-intro">Select your plates, adjust quantities, and place your order for pickup.</p>
+      <div class="order-layout">
+        <div class="card-grid" id="dishGrid">
+        </div>
+        <aside class="panel cart-panel" id="orderPanel" aria-labelledby="orderTitle">
+          <h3 id="orderTitle">Your cart <span class="badge badge-neutral" id="cartCount">0 items</span></h3>
+          <ul class="cart-list" id="cartItems" aria-live="polite"></ul>
+          <div class="cart-totals" id="cartSummary"></div>
+          <form id="checkoutForm" class="form-grid" method="post" action="#">
+            <div class="form-row full">
+              <label for="orderName">Client name</label>
+              <input type="text" id="orderName" name="orderName" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <label for="orderPhone">Phone number</label>
+              <input type="tel" id="orderPhone" name="orderPhone" required autocomplete="tel">
+            </div>
+            <div class="form-row">
+              <label for="pickupTime">Pickup time</label>
+              <input type="time" id="pickupTime" name="pickupTime" required>
+            </div>
+            <div class="form-row full">
+              <label for="pickupSpot">Pickup location</label>
+              <input type="text" id="pickupSpot" name="pickupSpot" placeholder="Sinkor Beach, Broad Street, Paynesville">
+            </div>
+            <div class="form-row full">
+              <button class="button primary" id="checkoutButton" type="submit">Place order</button>
+            </div>
+          </form>
+          <p id="checkoutStatus" class="status-text" aria-live="polite"></p>
+          <p id="lastOrder" class="muted-text"></p>
+          <section class="booking-panel" id="bookingPanel" aria-labelledby="bookingTitle">
+            <h4 id="bookingTitle">Book dishes for later</h4>
+            <p class="muted-text">Reserve meals for a future date and pickup time.</p>
+            <form id="bookingForm" class="form-grid" method="post" action="#">
+              <div class="form-row full">
+                <label for="bookingName">Client name</label>
+                <input type="text" id="bookingName" name="bookingName" required autocomplete="name">
+              </div>
+              <div class="form-row">
+                <label for="bookingPhone">Phone number</label>
+                <input type="tel" id="bookingPhone" name="bookingPhone" required autocomplete="tel">
+              </div>
+              <div class="form-row">
+                <label for="bookingGuests">Number of plates</label>
+                <input type="number" id="bookingGuests" name="bookingGuests" min="1" value="1" required>
+              </div>
+              <div class="form-row">
+                <label for="bookingDate">Booking date</label>
+                <input type="date" id="bookingDate" name="bookingDate" required>
+              </div>
+              <div class="form-row">
+                <label for="bookingTime">Pickup time</label>
+                <input type="time" id="bookingTime" name="bookingTime" required>
+              </div>
+              <fieldset class="form-row full booking-dishes">
+                <legend>Select dishes</legend>
+                <div class="dish-options" id="bookingDishOptions"></div>
+              </fieldset>
+              <div class="form-row full">
+                <label for="bookingNotes">Special note</label>
+                <textarea id="bookingNotes" name="bookingNotes" placeholder="No fish, less pepper, extra rice..."></textarea>
+              </div>
+              <div class="form-row full">
+                <button class="button secondary" type="submit">Book dishes</button>
+              </div>
+            </form>
+            <p id="bookingStatus" class="status-text" aria-live="polite"></p>
+            <p id="lastBooking" class="muted-text"></p>
+          </section>
+        </aside>
       </div>
     </section>
 
